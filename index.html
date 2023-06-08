@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <!-- Site title -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="CSS/style.css" type="text/CSS" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="https://use.fontawesome/release/v5.0.6/js/all.js"></script>
-
+    <script defer src="scripts/price_compiler.js"></script>
 </head>
 
 <body>
@@ -35,7 +36,7 @@
     </div>
     <div class="search-bar">
         <input type="text" placeholder="design, print, brand items...logos•shirts•flyers.. just type 'n' search" />
-        <a class="Search-btn"href="#"><i class="fas fa-search"></i></a>
+        <a class="Search-btn" href="#"><i class="fas fa-search"></i></a>
     </div>
     <div class="quick-service">
         <ul id="services">
@@ -50,136 +51,155 @@
         <h2>Print Media</h2>
         <h3>Brand Stuffs</h3>
     </div>
-    <div class="print-shop">
-        <a href="pages/24hrs-print-shop.html
-        ">24hr Print Shop</a>
-    </div>
-    <div class="intro-text">
-        <h1 id="ideas">Bring your ideas to life</h1>
-        <h1 id="designs">Feel your designs through print</h1>
-        <h1 id="create">Create something unique</h1>
-        <div class="square"></div>
-        <div class="circle"></div>
-        <div class="square"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
-    <div class="digital-marketing">
-        <a href="pages/digital-marketing.html">Run a Digital Markeing Campaign</a>
-    </div>
     <div class="featured-list">
         <div class="featuredlist-overlay">
             <h1 class="h1">Featured List</h1>
             <div class="list">
                 <img class="f-img" src="images/business-card.jpg" alt="business-card" />
-                <p class="title">
-                    Business Card
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="100" />
-                <p class="price">
-                    #4,499.99
-                </p>
-                <a class="order" href="order">order</a>
+                <div class="container">
+                    <p class="title">
+                        Business Card
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="100" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="3899.99">
+                    <p class="price" id="price">
+                        3899.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
                 <img class="f-img" src="images/flyer.jpg" alt="flyer" />
-                <p class="title">
-                    Flyer
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="100" />
-                <p class="price">
-                    #7,000
-                </p>
-                <a class="order" href="order">order</a>
+                <div class="container">
+                    <p class="title">
+                        Flyer
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="100" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="7000.00">
+                    <p class="price" id="price">
+                        7000.00
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/letter-head.jpg" alt="Jotter/Notepad" />
-                <p class="title">
-                    Jotter/Notepad
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="500" />
-                <p class="price">
-                    #17,500
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/jotter_notepad.jpg" alt="Jotter/Notepad" />
+                <div class="container">
+                    <p class="title">
+                        Jotter/Notepad
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="500" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="17499.99">
+                    <p class="price" id="price">
+                        17499.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/teedon-logo.jpg" alt="logo" />
-                <p class="title">
-                    Logo
-                </p>
-                <p class="quantity">
-                    1
-                </p>
-                <p class="price">
-                    from #5,000
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/teedon_logo.jpg" alt="logo" />
+                <div class="container">
+                    <p class="title">
+                        Logo
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="4999.99">
+                    <p class="price" id="price">
+                        4999.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
                 <img class="f-img" src="images/cotton_roundneck.jpg" alt="cotton roundneck" />
-                <p class="title">
-                    Cotton roundneck
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="1" />
-                <p class="price">
-                    #3,499.99
-                </p>
-                <a class="order" href="order">order</a>
+                <div class="container">
+                    <p class="title">
+                        Cotton roundneck
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="3499.99">
+                    <p class="price" id="price">
+                        3499.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
                 <img class="f-img" src="images/id_card.jpg" alt="ID card" />
-                <p class="title">
-                    ID card
-                </p>
-                <p class="quantity">
-                    1 font+back
-                </p>
-                <p class="price">
-                    #499.99
-                </p>
-                <a class="order" href="order">order</a>
+                <div class="container">
+                    <p class="title">
+                        ID card
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="999.99">
+                    <p class="price" id="price">
+                        999.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/rollup_banner.jpg" alt="Banner" />
-                <p class="title">
-                    Flex Banner
-                </p>
-                <p class="quantity">
-                    1
-                </p>
-                <p class="price">
-                    #199.99
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/billboard.jpg" alt="Banner" />
+                <div class="container">
+                    <p class="title">
+                        Flex Banner
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="169.99">
+                    <p class="price" id="price">
+                        169.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/rollup_banner.jpg" alt="Picture Frame" />
-                <p class="title">
-                    Picture Frame
-                </p>
-                <p class="quantity">
-                    1
-                </p>
-                <p class="price">
-                    #4,499.99
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/picture_frame.jpg" alt="Picture Frame" />
+                <div class="container">
+                    <p class="title">
+                        Picture Frame
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="4499.99">
+                    <p class="price" id="price">
+                        4499.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blurred">
+        <div class="blurred-inner">
+            <div class="print-shop">
+                <a href="pages/24hrs-print-shop.html">24hr Print Shop</a>
+            </div>
+            <div class="intro-text">
+                <h1 id="ideas">Bring your ideas to life</h1>
+                <h1 id="designs">Feel your designs through print</h1>
+                <h1 id="create">Create something unique</h1>
+                <div class="square"></div>
+                <div class="circle"></div>
+                <div class="square"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="digital-marketing">
+                <a href="pages/digital-marketing.html">Run a Digital Marketing Campaign</a>
             </div>
         </div>
     </div>
     <div class="items">
         <div>
-            <img src="images/icons/like.png" alt="Design" width="25px" /><span>Design</span>
+            <img src="images/icons/like.png" alt="Design" width="25px" /><span>Video</span>
             <p>
-                Request any kind of design with a click of a button
+                Request for a video edit, documentary or short intro
             </p>
         </div>
         <div>
-            <img src="images/icons/like.png" alt="Print" width="25px" /><span>Print</span>
+            <img src="images/icons/like.png" alt="Print" width="25px" /><span>Digital marketing</span>
             <p>
-                Request all kinds of print services with a click of a button
+                Request for digital marketing campaign
             </p>
         </div>
         <div>
@@ -195,167 +215,200 @@
             </p>
         </div>
     </div>
-    <div class="print-shop-all">
+    <div class="design-shop">
         <p>
-            Explore the print shop for all your printing services and more
+            Explore the Design shop for all your design services and more
         </p>
-        <a href="print_shop.html">Print Shop</a>
+        <a href="pages/design.html">Design Shop</a>
     </div>
     <div class="featured-list">
         <div class="featuredlist-overlay">
             <h1 class="h1">Shop List</h1>
             <div class="list">
-                <img class="f-img" src="images/business-card.jpg" alt="business-card" />
-                <p class="title">
-                    Business Card
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="100" />
-                <p class="price">
-                    #4,499.99
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/business-card.jpg" alt="Business card" />
+                <div class="container">
+                    <p class="title">
+                        Business Card
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="100" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="4499.99">
+                    <p class="price" id="price">
+                        4499.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/flyer.jpg" alt="flyer" />
-                <p class="title">
-                    Flyer
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="100" />
-                <p class="price">
-                    #7,000
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/flyer.jpg" alt="Flyer" />
+                <div class="container">
+                    <p class="title">
+                        Flyer
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="7000" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="7000">
+                    <p class="price" id="price">
+                        7000.00
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
                 <img class="f-img" src="images/letter-head.jpg" alt="letter head" />
-                <p class="title">
-                    Letter Head
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="500" />
-                <p class="price">
-                    #17,500
-                </p>
-                <a class="order" href="order">order</a>
+                <div class="container">
+                    <p class="title">
+                        Letter Head
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="500" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="17500">
+                    <p class="price" id="price">
+                        17500.00
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/mug.jpg" alt="mug" />
-                <p class="title">
-                    Mug
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="1" />
-                <p class="price">
-                    #2,000
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/mug.jpg" alt="Mug" />
+                <div class="container">
+                    <p class="title">
+                        Mug
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="1999">
+                    <p class="price" id="price">
+                        1999.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/teedon-logo.jpg" alt="logo" />
-                <p class="title">
-                    Logo
-                </p>
-                <p class="quantity">
-                    1
-                </p>
-                <p class="price">
-                    from #5,000
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/teedon_logo.jpg" alt="Logo" />
+                <div class="container">
+                    <p class="title">
+                        Logo
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="5000">
+                    <p class="price" id="price">
+                        5000.00
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/cotton_roundneck.jpg" alt="cotton roundneck" />
-                <p class="title">
-                    Cotton roundneck
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="1" />
-                <p class="price">
-                    #3,499.99
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/cotton_roundneck.jpg" alt="Cotton roundneck" />
+                <div class="container">
+                    <p class="title">
+                        Cotton roundneck
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="3499.99">
+                    <p class="price" id="price">
+                        3499.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
                 <img class="f-img" src="images/full_colour_book.jpg" alt="full colour book" />
-                <p class="title">
-                    Full colour book
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="100" />
-                <p class="price">
-                    #49,999.99
-                </p>
-                <a class="order" href="order">order</a>
+                <div class="container">
+                    <p class="title">
+                        Full colour book
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="100" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="49999.99">
+                    <p class="price" id="price">
+                        49999.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
                 <img class="f-img" src="images/id_card.jpg" alt="ID card" />
-                <p class="title">
-                    ID card
-                </p>
-                <p class="quantity">
-                    1 font+back
-                </p>
-                <p class="price">
-                    #499.99
-                </p>
-                <a class="order" href="order">order</a>
+                <div class="container">
+                    <p class="title">
+                        ID card
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="499.99">
+                    <p class="price" id="price">
+                        499.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
                 <img class="f-img" src="images/rollup_banner.jpg" alt="Rollup banner" />
-                <p class="title">
-                    Rollup banner
-                </p>
-                <p class="quantity">
-                    1
-                </p>
-                <p class="price">
-                    #27,839.99
-                </p>
-                <a class="order" href="order">order</a>
+                <div class="container">
+                    <p class="title">
+                        Rollup banner
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="27839.99">
+                    <p class="price" id="price">
+                        27839.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/rollup_banner.jpg" alt="Rollup banner" />
-                <p class="title">
-                    Sticker
-                </p>
-                <p class="quantity">
-                    1
-                </p>
-                <p class="price">
-                    #149.99
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/sticker.jpg" alt="Sticker" />
+                <div class="container">
+                    <p class="title">
+                        Sticker
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="169.99">
+                    <p class="price" id="price">
+                        169.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/teedon-logo.jpg" alt="Song/Album cover" />
-                <p class="title">
-                    Song/Album cover
-                </p>
-                <p class="quantity">
-                    1
-                </p>
-                <p class="price">
-                    #19,999.99
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/ad.jpg" alt="Song/Album cover" />
+                <div class="container">
+                    <p class="title">
+                        Song/Album cover
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="19999.99">
+                    <p class="price" id="price">
+                        19999.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
             <div class="list">
-                <img class="f-img" src="images/cotton_roundneck.jpg" alt="Throw pillow" />
-                <p class="title">
-                    Throw pillow
-                </p>
-                <input class="quantity" type="text" name="quantity" id="" value="1" />
-                <p class="price">
-                    #3,499.99
-                </p>
-                <a class="order" href="order">order</a>
+                <img class="f-img" src="images/throw_pillow.jpg" alt="Throw pillow" />
+                <div class="container">
+                    <p class="title">
+                        Throw pillow
+                    </p>
+                    <input class="quantity" type="text" name="quantity" id="quantity" value="1" onchange="compile()" />
+                    <input type="number" hidden class="rate" id="rate" value="3499.99">
+                    <p class="price" id="price">
+                        3499.99
+                    </p>
+                    <a class="order" href="order">order</a>
+                </div>
             </div>
         </div>
     </div>
     <div class="text">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quaerat omnis, odio non vitae, dolorem iste perferendis eius eligendi dolorum consequatur natus quam magni! Facere beatae id laudantium perferendis officiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa molestiae dignissimos, doloremque qui cupiditate magnam, distinctio cumque iusto nam non molestias, soluta fugiat architecto impedit, tenetur consequatur eius dolorum eaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, consequuntur reiciendis et delectus. Praesentium quae, laboriosam excepturi sint harum accusamus nemo magnam, nulla atque repudiandae est in. Porro maiores, qui.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quaerat omnis, odio non vitae, dolorem
+            iste perferendis eius eligendi dolorum consequatur natus quam magni! Facere beatae id laudantium perferendis
+            officiis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa molestiae dignissimos, doloremque
+            qui cupiditate magnam, distinctio cumque iusto nam non molestias, soluta fugiat architecto impedit, tenetur
+            consequatur eius dolorum eaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+            consequuntur reiciendis et delectus. Praesentium quae, laboriosam excepturi sint harum accusamus nemo
+            magnam, nulla atque repudiandae est in. Porro maiores, qui.
         </p>
     </div>
     <div class="design-subscription">
         <p class="paragraph">
-            We have monthly design packages tailored to suit your specific needs. Subscribe to one of our monthly design plans and get your designs when you need them.
+            We have monthly design packages tailored to suit your specific needs. Subscribe to one of our monthly design
+            plans and get your designs when you need them.
         </p>
         <a class="ten" href="/pages/design-subscription.html">10 designs</a>
         <a class="fifteen" href="/pages/design-subscription.html">15 designs</a>
@@ -364,7 +417,8 @@
         <div class="twenty-four">
             <h3>24 Hours Print Shop</h3>
             <p class="p-text">
-                Our 24 hours print shop offers printing services that we deliver in 24 hours. <a href="pages/24hrs-print-shop.html">Explore the 24 Hours shop</a>
+                Our 24 hours print shop offers printing services that we deliver in 24 hours. <a
+                    href="pages/24hrs-print-shop.html">Explore the 24 Hours shop</a>
             </p>
         </div>
     </div>
@@ -413,10 +467,14 @@
                     Follow us on our social media platforms
                 </p>
                 <ul>
-                    <li><a href="https://facebook.com/bola"><img src="images/icons/social_icons/facebook.png" alt="Bola Facebook page" width="20px" /></a></li>
-                    <li><a href="https://twitter.com/bola"><img src="images/icons/social_icons/twitter.png" alt="Bola Twitter page" width="20px" /></a></li>
-                    <li><a href="https://instagram.com/bola"><img src="images/icons/social_icons/instagram.png" alt="Bola Instagram page" width="20px" /></a></li>
-                    <li><a href="https://YouTube.com/bola"><img src="images/icons/social_icons/youtube.png" alt="Bola Youtube page" width="20px" /></a></li>
+                    <li><a href="https://facebook.com/bola"><img src="images/icons/social_icons/facebook.png"
+                                alt="Bola Facebook page" width="20px" /></a></li>
+                    <li><a href="https://twitter.com/bola"><img src="images/icons/social_icons/twitter.png"
+                                alt="Bola Twitter page" width="20px" /></a></li>
+                    <li><a href="https://instagram.com/bola"><img src="images/icons/social_icons/instagram.png"
+                                alt="Bola Instagram page" width="20px" /></a></li>
+                    <li><a href="https://YouTube.com/bola"><img src="images/icons/social_icons/youtube.png"
+                                alt="Bola Youtube page" width="20px" /></a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -427,4 +485,5 @@
         </div>
     </div>
 </body>
+
 </html>

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../CSS/style.css">
     <title>Design</title>
+    <script defer src="../scripts/slider.js"></script>
+    <script defer src="../scripts/image_select.js"></script>
 </head>
 <body>
     <div class="header">
@@ -28,67 +30,87 @@
         <a href="../index.html"><img class="Bola-logo" src="../images/logo.jpg" alt="Bola logo" /></a>
         <a class="sign-in" href="pages/sign-In">Sign In</a>
     </div>
-    <div class="design-header">
-        <img src="../images/id_card.jpg" alt="ID Card">
-        <img src="../images/cotton_roundneck.jpg" alt="Roundneck">
-        <img src="../images/full_colour_book.jpg" alt="Book">
-        <img src="../images/letter-head.jpg" alt="Letter head">
-        <img src="../images/logo.jpg" alt="Logo Design">
+    <div class="wrapper">
+        <div class="carousel">
+            <img src="../images/cotton_roundneck.jpg" alt="">
+            <img src="../images/flyer.jpg" alt="">
+            <img src="../images/full_colour_book.jpg" alt="">
+            <img src="../images/mug.jpg" alt="">
+            <img src="../images/rollup_banner.jpg" alt="">
+            <img src="../images/letter-head.jpg" alt="">
+            <img src="../images/business-card.jpg" alt="">
+        </div>
     </div>
     <div class="design-request">
-        <form action="">
-            <p>Request for graphic design(s) at your own price</p>
-            <input type="text" name="title" id="title" placeholder="Design Title">
-            <input type="text" name="name" id="name" placeholder="Name">
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="tel" name="number" id="number" placeholder="Phone number">
-            <label for="design_type">Design type</label>
-            <select name="design_type" id="design_type">
-                <option value="">Logo</option>
-                <option value="">Flyer</option>
-                <option value="">Banner</option>
-                <option value="">Letter head</option>
-                <option value="">Shirt</option>
-                <option value="">Web page</option>
-                <option value="">Web site</option>
-                <option value="">ID</option>
-                <option value="">Illustration</option>
-                <option value="">Book cover</option>
-                <option value="">Online ad</option>
-                <option value="">Song cover</option>
-                <option value="">Book layout</option>
-            </select>
-            <input type="number" name="budget" id="budget" placeholder="Design Budget">
-            <label for="dimensions">Dimensions</label>
-            <div class="dimensions">
-                <div>
-                    <select name="dimensions" id="length">
-                        <option value="">A6</option>
-                        <option value="">A5</option>
-                        <option value="">A4</option>
-                        <option value="">A3</option>
-                        <option value="">A2</option>
-                        <option value="">A1</option>
-                    </select>
-                    <select name="dimensions" id="width">
-                        <option value="">A6</option>
-                        <option value="">A5</option>
-                        <option value="">A4</option>
-                        <option value="">A3</option>
-                        <option value="">A2</option>
-                        <option value="">A1</option>
-                    </select>
+        <div class="card">
+            <form action="">
+                <p>Request for graphic design(s) at your own price</p>
+                <input type="text" name="title" id="title" placeholder="Design Title">
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="tel" name="number" id="number" placeholder="Phone number">
+                <label for="design_type">Design type</label>
+                <select name="design_type" id="design_type">
+                    <option value="logo" selected>Logo</option>
+                    <option value="flyer">Flyer</option>
+                    <option value="banner">Banner</option>
+                    <option value="billboard">Billboard</option>
+                    <option value="sticker">Sticker</option>
+                    <option value="letter head">Letter head</option>
+                    <option value="shirt">Shirt</option>
+                    <option value="web page">Web page</option>
+                    <option value="web site">Web site</option>
+                    <option value="iv">Invitation</option>
+                    <option value="id">ID</option>
+                    <option value="layout">Layout</option>
+                    <option value="illustration">Illustration</option>
+                    <option value="book cover">Book cover</option>
+                    <option value="online ad">Online ad</option>
+                    <option value="song cover">Song cover</option>
+                    <option value="book layout">Book layout</option>
+                </select>
+                <input type="number" name="budget" id="budget" placeholder="Design Budget">
+                <div class="dimensions">
+                    <div>
+                        <div>
+                            <label for="length">Length</label>
+                            <select name="length" id="length">
+                                <option value="A6">A6</option>
+                                <option value="A5">A5</option>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                                <option value="A2">A2</option>
+                                <option value="A1">A1</option>
+                                <option value="custom length">Custom length</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="width">Width</label>
+                            <select name="width" id="width">
+                                <option value="A6">A6</option>
+                                <option value="A5">A5</option>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                                <option value="A2">A2</option>
+                                <option value="A1">A1</option>
+                                <option value="custom width">Custom width</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="number" name="inputlength" id="inputlength" placeholder="length">
+                        <input type="number" name="inputwidth" id="inputwidth" placeholder="width">
+                    </div>
                 </div>
-                <div>
-                    <input type="number" name="dimensions" id="length" placeholder="length">
-                    <input type="number" name="dimensions" id="width" placeholder="width">
-                </div>
+                <label for="image">Image upload</label>
+                <input type="image" name="image" src="" alt="">
+                <label for="file">File upload</label>
+                <input type="file" name="file" id="file">
+            </form>
+            <div class="image">
+                <img id="image" src="../images/teedon_logo.jpg" alt="logo">
             </div>
-            <label for="image">Image upload</label>
-            <input type="image" name="image" src="" alt="">
-            <label for="file">File upload</label>
-            <input type="file" name="file" id="file">
-        </form>
+        </div>
     </div>
     <div class="design-subscription">
         <p class="paragraph">

@@ -18,6 +18,10 @@
     --Shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--lite-Grey);
     margin: 0;
@@ -262,7 +266,7 @@ button {
     padding: 100px 50px 50px 50px;
     margin: 10px 0px;
     height: 450px;
-    background-image: url(../images/headlinebackground.jpg);
+    background-image: url(../images/bola_logo.jpg);
     background-position: center;
     background-size: cover;
     border: solid 1px var(--lite-Grey);
@@ -346,6 +350,27 @@ button {
     }
 }
 
+.blurred {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url(../images/headlinebackground.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.blurred-inner {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    padding: 20px 50px;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(45deg, #000000a2, #ffffffb1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+}
+
 .print-shop {
     display: grid;
     place-items: center;
@@ -363,6 +388,7 @@ button {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
     transition: all 250ms ease-in;
 }
 
@@ -377,7 +403,7 @@ button {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 100px 20px;
+    padding: 50px 20px;
     justify-content: center;
     align-items: center;
 }
@@ -458,15 +484,15 @@ button {
 
 .digital-marketing a {
     width: 80%;
-    color: var(--Magenta);
+    color: var(--White);
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding: 20px;
-    border: 1px solid var(--Magenta);
+    border: 1px solid var(--White);
     border-radius: 10px;
-    box-shadow: 1px 1px 3px var(--Dark-Grey);
+    box-shadow: 2px 2px 5px #000;
     transition: all 250ms ease-in;
 }
 
@@ -475,7 +501,7 @@ button {
     width: 85%;
     background: var(--Dark-Grey);
     font-size: 22px;
-    border: 1px solid var(--Orange);
+    border: none;
 }
 
 #ideas {
@@ -600,111 +626,138 @@ button {
 }
 
 .list {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-    "img img title"
-    "img img price"
-    "img img quantity"
-    "img img order";
-    place-items: center;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 10px 0px;
-    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-image: linear-gradient(45deg, rgba(128, 0, 128, 0.15), rgba(252, 3, 94, 0.15));
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 350ms ease-in-out;
+}
+
+
+.list:hover {
+    margin: 9px;
+    height: 300px;
+    background-color: rgba(137, 43, 226, 0.45);
+    box-shadow: 2px 2px 5px var(--Dark-Grey);
+}
+
+.list img {
+    width: 150px;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--Dark-Grey);
     transition: all 250ms ease-in-out;
 }
 
-.list:hover {
+.list img:hover {
+    width: 160px;
+}
+
+.list:hover img {
+    position: absolute;
+    align-items: top;
+    top: 0;
+    transform: translateY(10);
+    transition: all 450ms ease-in-out;
+}
+
+.container {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
     padding: 10px;
-    margin: 5px 0px;
-    border: 1px solid var(--Orange);
-}
-
-.list:hover .f-img {
-    border-radius: 5px;
-    transition: border-radius 300ms ease-in-out;
-}
-
-.flyer, .Letter-head, .mug, .logo {
-    width: 80%;
-    display: grid;
-    background: var(--lite-Grey);
+    padding-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(252, 3, 94, 0.9);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin: 5% 10%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-    "img img"
-    "title title"
-    "quantity price";
-    box-shadow: -4px -4px 3px var(--Black),
-    4px 4px 5px var(--Black);
-    z-index: 1;
 }
 
-.f-img {
-    grid-area: img;
-    width: 100%;
-    box-shadow: 0.5px 0.5px 3px var(--Dark-Grey),
-    0.5px 0.5px 3px var(--Dark-Grey);
+.list:hover .container {
+    display: flex;
+    animation: slide-in 750ms ease-in-out;
 }
 
-.title {
-    grid-area: title;
-    width: 100;
+@keyframes slide-in {
+    0% {
+        margin-bottom: -150px;
+        opacity: 0;
+        display: none;
+    }
+    25% {
+        margin-bottom: -100;
+        opacity: 0;
+        display: none;
+    }
+    50% {
+        margin-bottom: -50;
+        opacity: 0.5;
+        display: flex;
+    }
+    100% {
+        margin-bottom: 0;
+        opacity: 1;
+        display: flex;
+    }
+}
+
+.container .title {
     color: var(--Black);
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    margin-left: 5px;
-}
-
-.quantity {
-    grid-area: quantity;
-    width: 80%;
-    height: 35px;
-    background: var(--White);
     font-size: 18px;
-    padding-left: 5px;
-    margin-left: 5px;
-    color: var(--Dark-Grey);
-    text-align: left;
-    outline: none;
-    border: 1px solid var(--Orange);
-    border-radius: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(137, 43, 226, 0.65);
 }
 
-.price {
-    grid-area: price;
-    width: 80%;
-    font-size: 15px;
+.container .quantity {
+    width: 100px;
+    color: black;
     padding: 5px;
-    color: var(--Magenta);
+    margin: 5px;
+    outline: none;
     text-align: center;
-    margin-left: 5px;
-    border: 1px solid var(--Magenta);
+    border: 1px solid rgba(0, 0, 0, 0.65);
     border-radius: 10px;
 }
 
-.order {
-    grid-area: order;
-    width: 80%;
-    color: var(--White);
-    background: var(--Orange);
-    text-decoration: none;
-    text-align: center;
+.container .price {
+    color: var(--Orange);
+    padding: 5px;
+    font-size: 15px;
     font-weight: bold;
-    padding: 10px;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-shadow: 1px 1px 2px var(--Black);
+}
+
+.container .order {
+    width: 70px;
+    color: white;
+    background-color: orangered;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
     border-radius: 10px;
-    box-shadow: 0.5px 0.5px 3px var(--Dark-Grey);
-    transition: all 250ms ease-in;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.65);
+    transition: all 250ms ease-in-out;
 }
 
 .order:hover {
-    width: 85%;
-    background: var(--Dark-Grey);
+    background-color: rgb(137, 37, 1);
+    color: var(--White);
+}
+
+.order:active {
+    padding: 3.5px;
 }
 
 .items {
@@ -712,6 +765,7 @@ button {
     width: 80%;
     padding: 10px;
     margin: 0 auto;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -736,17 +790,18 @@ button {
     text-align: justify;
 }
 
-.print-shop-all {
+.design-shop {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 20px;
     margin: 0 auto;
+    margin-bottom: 50px;
     justify-content: center;
     align-items: center
 }
 
-.print-shop-all p {
+.design-shop p {
     padding: 5px;
     margin: 10px;
     margin-top: 15px;
@@ -755,7 +810,7 @@ button {
     color: var(--Black);
 }
 
-.print-shop-all a {
+.design-shop a {
     width: 70%;
     text-decoration: none;
     background: none;
@@ -772,7 +827,7 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.print-shop-all a:hover {
+.design-shop a:hover {
     font-size: 20px;
     background: var(--Dark-Grey);
     color: var(--Orange);
@@ -1113,62 +1168,112 @@ button {
 
 /* Design */
 
-.design-header, .print-header {
-    display: flex;
-    width: 100%;
-    padding: 20px 50px;
-    margin: 0 auto;
-}
-
-.design-header img, .print-header img {
-    width: 15%;
+.wrapper {
+    position: relative;
     margin: auto;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1d;
 }
 
-.design-request, .print-request {
+.carousel {
     display: flex;
     width: 100%;
-    margin: 0 auto;
-    padding: 30px 50px;
-    border-top: 15px solid var(--Dark-Grey);
+    height: 350px;
+    justify-content: center;
     align-items: center;
+    margin: auto;
+    padding-left: 350px;
+    font-size: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
 
-.design-request form, .print-request form {
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
+    width: calc(100/3);
+    object-fit: cover;
+    height: 250px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.carousel img:first-child {
+    margin-left: 0;
+}
+
+.design-request, .print-request, .web-design-request {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-top: 15px solid var(--Dark-Grey);
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bola_logo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.card {
+    width: 80%;
+    display: flex;
+    margin: 20px 50px;
+    background-color: #00000015;
+    background-blend-mode: multiply;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    box-shadow: 2px 2px 8px #0000006e,
+                -2px -2px 8px #0000006e;
+}
+
+.design-request form, .print-request form, .web-design-request form {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    margin: 20px auto;
+    margin: 50px 50px;
     padding: 50px;
+    border-radius: 6px;
     background-color: #00000015;
-    background-blend-mode: multiply;
 }
 
-.design-request picture, .print-request picture {
-    width: 30%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #00000015;
-    background-blend-mode: multiply;
+.design-request image, .print-request image, .web-design-request image {
+    margin: auto;
+    background: #000;
+    transition: all 250ms ease-in-out;
 }
 
-.picture img {
-    width: 500px;
+.image img {
+    width: 300px;
+    margin: auto;
+    transition: all 250ms ease-in-out;
 }
 
-.design-request p, .print-request p {
+.design-request p, .print-request p, .web-design-request p {
     color: var(--Dark-Grey);
     font-size: 16px;
+    font-weight: bold;
 }
 
-.design-request label, .print-request label {
+.design-request label, .print-request label, .web-design-request label {
     color: var(--Black);
     font-size: 14px;
     font-weight: bold;
     padding-top: 15px;
 }
 
-.design-request input, .print-request input {
+.design-request input, .print-request input, .web-design-request input {
     width: 70%;
     margin: 10px auto;
     margin-left: 0;
@@ -1179,18 +1284,20 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request input:focus, .print-request input:focus {
+.design-request input:focus, .print-request input:focus, .web-design-request input:focus {
     outline: none;
     border: none;
     border-bottom: 1px solid var(--Orange);
 }
 
-.design-request input:nth-child(5), .design-request select, .print-request input:nth-child(5), .print-request select {
-    width: 20%;
+.design-request input:nth-child(5), .print-request input:nth-child(5), .web-design-request input:nth-child(5) {
+    width: 40%;
     margin-left: 0;
 }
 
-.design-request select, .print-request select {
+.design-request select, .print-request select, .web-design-request select {
+    width: 40%;
+    margin-left: 0;
     padding: 5px;
     background: none;
     outline: none;
@@ -1199,7 +1306,7 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request select:focus, .print-request select:focus {
+.design-request select:focus, .print-request select:focus, .web-design-request select:focus {
     border: 1px solid var(--Orange);
 }
 
@@ -1214,14 +1321,16 @@ button {
 
 .dimensions div {
     display: flex;
+    flex-direction: column;
 }
 
-.dimensions select:nth-child(2) {
-    margin-left: 10px;
+.dimensions select {
+    width: 80%;
+    margin-top: 5px;
 }
 
-.dimensions input:nth-child(2) {
-    margin-left: 10px;
+#inputlength, #inputwidth {
+    display: none;
 }
 
 /* 2hrs Print Shop */
@@ -1245,4 +1354,34 @@ button {
     text-align: center;
     font-size: large;
     color: var(--Magenta);
+}
+
+/* Code template */
+.code-template {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.code-template a {
+    width: 80%;
+    color: var(--Magenta);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--Magenta);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px var(--Dark-Grey);
+    transition: all 250ms ease-in;
+}
+
+.code-template a:hover {
+    color: var(--Orange);
+    width: 85%;
+    background: var(--Dark-Grey);
+    font-size: 22px;
+    border: 1px solid var(--Orange);
 }
