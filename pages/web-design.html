@@ -41,38 +41,37 @@
         </div>
     </div>
     <div class="web-design-request">
-        <form action="">
-            <p>Describe type of Web Design</p>
-            <input type="text" name="title" id="title" placeholder="Print Title">
-            <input type="text" name="name" id="name" placeholder="Name">
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="tel" name="number" id="number" placeholder="Phone number">
-            <label for="print_type">Type of design</label>
-            <select name="print_type" id="print_type">
-                <option value="">Landing Page</option>
-                <option value="">HTML</option>
-                <option value="">Web page</option>
-                <option value="">Styling(CSS)</option>
-                <option value="">Script(Js)</option>
-                <option value="">HTML form</option>
-                <option value="">Portfolio</option>
-                <option value="">eCommerce Site</option>
-                <option value="">Professional Site</option>
-                <option value="">Social Media Site</option>
-                <option value="">Wordpress</option>
-                <option value="">Web App</option>
-            </select>
-            <label for="page-count">Proposed number of pages</label>
-            <input type="number"  id="page-count" name="page-count">
-            <label for="file">Image upload</label>
-            <input type="file" name="file" id="file">
-        </form>
-        <div class="picture">
-            <img src="../images/letter-head.jpg" alt="">
+        <div class="card">
+            <form action="">
+                <p>Describe type of web design</p>
+                <input type="text" name="title" id="title" placeholder="Design Title">
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="tel" name="number" id="number" placeholder="Phone number">
+                <label for="design_type">Print type</label>
+                <select name="design_type" id="design_type">
+                    <option value="landing page" selected>Landing page</option>
+                    <option value="portfolio">Porfolio</option>
+                    <option value="coorperate">Coorperate site</option>
+                    <option value="ecommerce">eCommerce</option>
+                    <option value="social">Social</option>
+                    <option value="web app">Web app</option>
+                    <option value="web page">Web page</option>
+                    <option value="css">CSS(styling)</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="business card">Wordppress</option>
+                </select>
+                <label for="file">File upload</label>
+                <input type="file" name="file" id="file">
+            </form>
+            <div class="image">
+                <img id="image" src="../images/paper_bag.jpg" alt="Paper bag">
+            </div>
+            <input type="submit" id="submit" value="submit">
         </div>
     </div>
     <div class="code-template">
-        <a href="../pages/code-template.html">Code templates</a>
+        <a href="../pages/mockups-designs-templates.html">Code templates</a>
     </div>
     <div class="footer">
         <div class="footer_sd">

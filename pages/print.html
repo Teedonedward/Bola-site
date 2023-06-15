@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <title>Print</title>
     <script defer src="../scripts/slider.js"></script>
+    <script defer src="../scripts/image_select_print.js"></script>
 </head>
 <body>
     <div class="header">
@@ -41,61 +42,77 @@
         </div>
     </div>
     <div class="print-request">
-        <form action="">
-            <p>Describe item for print</p>
-            <input type="text" name="title" id="title" placeholder="Print Title">
-            <input type="text" name="name" id="name" placeholder="Name">
-            <input type="email" name="email" id="email" placeholder="Email">
-            <input type="tel" name="number" id="number" placeholder="Phone number">
-            <label for="print_type">Item to print</label>
-            <select name="print_type" id="print_type">
-                <option value="">Flyer</option>
-                <option value="">Roll Up Banner</option>
-                <option value="">Sticker</option>
-                <option value="">Carrier bag</option>
-                <option value="">Jotter/Notepad</option>
-                <option value="">Letter head</option>
-                <option value="">Shirt</option>
-                <option value="">ID</option>
-                <option value="">Book cover</option>
-                <option value="">Online ad</option>
-                <option value="">Song cover</option>
-                <option value="">Book layout</option>
-            </select>
-            <label for="dimensions">Dimensions</label>
-            <div class="dimensions">
-                <div>
-                    <select name="dimensions" id="length">
-                        <option value="">A6</option>
-                        <option value="">A5</option>
-                        <option value="">A4</option>
-                        <option value="">A3</option>
-                        <option value="">A2</option>
-                        <option value="">A1</option>
-                    </select>
-                    <select name="dimensions" id="width">
-                        <option value="">A6</option>
-                        <option value="">A5</option>
-                        <option value="">A4</option>
-                        <option value="">A3</option>
-                        <option value="">A2</option>
-                        <option value="">A1</option>
-                    </select>
+        <div class="card">
+            <form action="">
+                <p>Describe item for print</p>
+                <input type="text" name="title" id="title" placeholder="Print Title">
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="tel" name="number" id="number" placeholder="Phone number">
+                <label for="design_type">Print type</label>
+                <select name="design_type" id="design_type">
+                    <option value="paper bag" selected>Paper bag</option>
+                    <option value="flyer">Flyer</option>
+                    <option value="picture frame">Picture frame</option>
+                    <option value="banner">Banner</option>
+                    <option value="billboard">Billboard</option>
+                    <option value="sticker">Sticker</option>
+                    <option value="letter head">Letter head</option>
+                    <option value="shirt">Shirt</option>
+                    <option value="jotter_notepad">Jotter/Notepad</option>
+                    <option value="business card">Business card</option>
+                    <option value="iv">Invitation</option>
+                    <option value="id">ID</option>
+                    <option value="mug">Mug</option>
+                    <option value="book cover">Book cover</option>
+                    <option value="exercise book">Exercise book</option>
+                    <option value="song cover">Song cover</option>
+                    <option value="book layout">Book inner</option>
+                    <option value="poly packaging">Poly packaging</option>
+                </select>
+                <div class="dimensions">
+                    <div>
+                        <div>
+                            <label for="length">Length</label>
+                            <select name="length" id="length">
+                                <option value="A6">A6</option>
+                                <option value="A5">A5</option>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                                <option value="A2">A2</option>
+                                <option value="A1">A1</option>
+                                <option value="custom length">Custom length</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="width">Width</label>
+                            <select name="width" id="width">
+                                <option value="A6">A6</option>
+                                <option value="A5">A5</option>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                                <option value="A2">A2</option>
+                                <option value="A1">A1</option>
+                                <option value="custom width">Custom width</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="number" name="inputlength" id="inputlength" placeholder="length">
+                        <input type="number" name="inputwidth" id="inputwidth" placeholder="width">
+                    </div>
                 </div>
-                <div>
-                    <input type="number" name="dimensions" id="length" placeholder="length">
-                    <input type="number" name="dimensions" id="width" placeholder="width">
-                </div>
+                <label for="file">File upload</label>
+                <input type="file" name="file" id="file">
+            </form>
+            <div class="image">
+                <img id="image" src="../images/paper_bag.jpg" alt="Paper bag">
             </div>
-            <label for="image">Image upload</label>
-            <input type="image" name="image" src="" alt="">
-            <label for="file">File upload</label>
-            <input type="file" name="file" id="file">
-        </form>
+            <input type="submit" id="submit" value="submit">
+        </div>
     </div>
     <div class="print-shop">
-        <a href="pages/24hrs-print-shop.html
-        ">24hr Print Shop</a>
+        <a href="/pages/24hrs-print-shop.html">24hr Print Shop</a>
     </div>
     <div class="footer">
         <div class="footer_sd">

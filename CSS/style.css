@@ -262,6 +262,7 @@ button {
 }
 
 .headline {
+    position: relative;
     width: 100%;
     padding: 100px 50px 50px 50px;
     margin: 10px 0px;
@@ -269,10 +270,22 @@ button {
     background-image: url(../images/bola_logo.jpg);
     background-position: center;
     background-size: cover;
-    border: solid 1px var(--lite-Grey);
     justify-content: center;
     align-items: center;
     box-shadow: var(--Shadow);
+    isolation: isolate;
+}
+
+.headline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.85), rgba(83, 83, 83, 0.85));
+    background-blend-mode: multiply;
+    z-index: -1;
 }
 
 .headline h1, h2, h3 {
@@ -281,16 +294,17 @@ button {
     justify-content: center;
     align-items: center;
     text-align: left;
-    color: var(--Dark-Grey);
 }
 
 .headline h1 {
+    position: relative;
     font-size: 105px;
+    font-weight: bolder;
     padding-bottom: 10px;
-    text-shadow: 1px 1px 2px var(--lite-Grey);
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px var(--Black);
+    color: transparent;
+    -webkit-text-stroke: 2px var(--Orange);
     animation: from-left 1.2s ease-in-out;
+    isolation: isolate;
 }
 
 @keyframes from-left {
@@ -303,12 +317,35 @@ button {
     }
 }
 
+.headline h1::before {
+    position: absolute;
+    content: "Create Designs";
+    top: 0;
+    left: 0;
+    padding-top: 3px;
+    padding-left: 3px;
+    -webkit-text-stroke: 3px var(--Magenta);
+    filter: blur(2px);
+    z-index: -1;
+    opacity: 0;
+    animation: opacity 3.2s 1.2s ease-in-out 50;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .headline h2 {
     padding-left: 520px;
-    font-size: 55px;
+    font-size: 85px;
     color: var(--Black);
-    text-shadow: 1px 1px 2px var(--Yellow);
-    animation: colour-change 5s 500ms ease-in-out;
+    text-shadow: 2px 2px 5px var(--Black);
+    animation: colour-change 20s 500ms ease-in-out 50;
 }
 
 @keyframes colour-change {
@@ -323,26 +360,69 @@ button {
     }
     100% {
         text-align: left;
-        color: var(--Black);
+        color: var(--Orange);
     }
 }
 
 .headline h3 {
+    position: relative;
+}
+
+.headline h3::before {
+    position: absolute;
+    content: "Brand stuff";
+    top: 0;
+    left: 0;
     padding-left: 520px;
     font: comfortaa;
     font-size: 35px;
-    animation: from-right 1.2s ease-in-out;
-    color: var(--Blue);
-    text-shadow: 1px 1px 3px var(--Cyan);
+    animation: from-right 5.2s ease-in-out;
+    color: orangered;
+    text-shadow: 1px 1px 3px var(--Black);
 }
 
 @keyframes from-right {
     0% {
+        content: "";
         font: arial;
         font-size: 50px;
         font-weight: bold;
     }
+    8.33% {
+        content: "B";
+    }
+    16.67% {
+        content: "Br";
+    }
+    24.99% {
+        content: "Bra";
+    }
+    33.33% {
+        content: "Bran";
+    }
+    41.66% {
+        content: "Brand";
+    }
+    49.99% {
+        content: "Brand ";
+    }
+    58.33% {
+        content: "Brand s";
+    }
+    66.64% {
+        content: "Brand st";
+    }
+    74.97% {
+        content: "Brand stu";
+    }
+    83.33% {
+        content: "Brand stuf";
+    }
+    91.66% {
+        content: "Brand stuff";
+    }
     100% {
+        content: "Brand stuff";
         font: comfortaa;
         font-size: 35px;
         font-weight: normal;
@@ -366,9 +446,10 @@ button {
     left: 50%;
     padding: 20px 50px;
     transform: translate(-50%, -50%);
-    background-image: linear-gradient(45deg, #000000a2, #ffffffb1);
-    backdrop-filter: blur(15px);
+    background-image: linear-gradient(45deg, #00000077, #ffffff7d);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
+    box-shadow: 3px 3px 6px #000;
 }
 
 .print-shop {
@@ -519,7 +600,7 @@ button {
 }
 
 #create {
-    color: var(--Grey);
+    color: var(--White);
     font-size: 35px;
     text-align: center;
 }
@@ -529,6 +610,18 @@ button {
     background-position: center;
     width: 100%;
     padding-bottom: 30px;
+    animation: slide 1.8s 500ms ease-in;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .featuredlist-overlay {
@@ -636,8 +729,65 @@ button {
     align-items: center;
     border-radius: 10px;
     transition: all 350ms ease-in-out;
+    animation: appear 2s ease-in;
 }
 
+@keyframes appear {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.list:nth-child(1) {
+    animation-delay: 800ms;
+}
+
+.list:nth-child(2) {
+    animation-delay: 900ms;
+}
+
+.list:nth-child(3) {
+    animation-delay: 1000ms;
+}
+
+.list:nth-child(4) {
+    animation-delay: 1100ms; 
+}
+
+.list:nth-child(5) {
+    animation-delay: 850ms; 
+}
+
+.list:nth-child(6) {
+    animation-delay: 950ms;
+}
+
+.list:nth-child(7) {
+    animation-delay: 1050ms; 
+}
+
+.list:nth-child(8) {
+    animation-delay: 1150ms; 
+}
+
+.list:nth-child(9) {
+    animation-delay: 900ms; 
+}
+
+.list:nth-child(10) {
+    animation-delay: 1000ms;
+}
+
+.list:nth-child(11) {
+    animation-delay: 1100ms; 
+}
+
+.list:nth-child(12) {
+    animation-delay: 1200ms; 
+}
 
 .list:hover {
     margin: 9px;
@@ -881,6 +1031,8 @@ button {
 .ten {
     grid-area: ten;
     background: var(--Cyan);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .fifteen {
@@ -896,6 +1048,8 @@ button {
 .thirty {
     grid-area: thirty;
     background: var(--Black);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .p-text {
@@ -1226,6 +1380,7 @@ button {
 }
 
 .card {
+    position: relative;
     width: 80%;
     display: flex;
     margin: 20px 50px;
@@ -1331,6 +1486,33 @@ button {
 
 #inputlength, #inputwidth {
     display: none;
+}
+
+#submit {
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+    padding: 10px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    color: var(--White);
+    background-color: var(--Orange);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
+}
+
+#submit:hover {
+    color: var(--Orange);
+    background-color: var(--Dark-Grey);
+}
+
+#submit:active {
+    padding: 5px;
+    margin-bottom: 45px;
+    color: var(--Orange);
+    background-color: var(--Dark-Grey);
 }
 
 /* 2hrs Print Shop */
