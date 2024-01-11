@@ -89,30 +89,35 @@ button {
 }
 
 .drop-down-menu {
-    width: 100vw;
-    height: 95vh;
+    width: 300px;
+    height: 400px;
     margin: 0 auto;
     margin-top: 15px;
     margin-left: -20px;
     position: absolute;
+    top: 30px;
+    left: 100px;
     background: url(../images/menu.jpg);
     background-size: cover;
+    z-index: 100;
 }
 
 .ddm ul {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 95vh;
+    width: 300px;
+    height: 400px;
     margin: 0 auto;
     position: absolute;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
 }
 
 .drop-down-menu ul li {
     margin: 10px;
+    padding: 10px;
 }
 
 .drop-down-menu ul li a {
@@ -130,7 +135,7 @@ button {
     color: var(--Orange);
     border: 1px solid var(--Orange);
     width: 60%;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 10px 30px;
 }
 
@@ -827,6 +832,7 @@ button {
     padding-bottom: 25px;
     justify-content: center;
     align-items: center;
+    background-color: #00000073;
     backdrop-filter: blur(20px);
     border-top: 1px solid rgba(252, 3, 94, 0.9);
     border-bottom-left-radius: 10px;
@@ -862,13 +868,14 @@ button {
 }
 
 .container .title {
-    color: var(--Black);
+    color: var(--White);
     font-size: 18px;
     text-align: center;
     text-shadow: 1px 1px 2px rgba(137, 43, 226, 0.65);
 }
 
 .container .quantity {
+    display: none;
     width: 100px;
     color: black;
     padding: 5px;
@@ -1366,7 +1373,7 @@ button {
     margin-left: 0;
 }
 
-.design-request, .print-request, .web-design-request {
+.design-request, .print-request, .web-design-reques, .place-order {
     display: flex;
     width: 100%;
     margin: auto;
@@ -1394,7 +1401,7 @@ button {
                 -2px -2px 8px #0000006e;
 }
 
-.design-request form, .print-request form, .web-design-request form {
+.design-request form, .print-request form, .web-design-request form, .place-order form {
     display: flex;
     flex-direction: column;
     margin: 50px 50px;
@@ -1403,7 +1410,7 @@ button {
     background-color: #00000015;
 }
 
-.design-request image, .print-request image, .web-design-request image {
+.design-request image, .print-request image, .web-design-request image, .place-order image {
     margin: auto;
     background: #000;
     transition: all 250ms ease-in-out;
@@ -1415,20 +1422,20 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request p, .print-request p, .web-design-request p {
+.design-request p, .print-request p, .web-design-request p, .place-order p {
     color: var(--Dark-Grey);
     font-size: 16px;
     font-weight: bold;
 }
 
-.design-request label, .print-request label, .web-design-request label {
+.design-request label, .print-request label, .web-design-request label, .place-order label {
     color: var(--Black);
     font-size: 14px;
     font-weight: bold;
     padding-top: 15px;
 }
 
-.design-request input, .print-request input, .web-design-request input {
+.design-request input, .print-request input, .web-design-request input, .place-order input {
     width: 70%;
     margin: 10px auto;
     margin-left: 0;
@@ -1439,18 +1446,19 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request input:focus, .print-request input:focus, .web-design-request input:focus {
+.design-request input:focus, .print-request input:focus, .web-design-request input:focus, .place-order input:focus {
     outline: none;
     border: none;
+    background: none;
     border-bottom: 1px solid var(--Orange);
 }
 
-.design-request input:nth-child(5), .print-request input:nth-child(5), .web-design-request input:nth-child(5) {
+.design-request input:nth-child(5), .print-request input:nth-child(5), .web-design-request input:nth-child(5), .place-order input:nth-child(5) {
     width: 40%;
     margin-left: 0;
 }
 
-.design-request select, .print-request select, .web-design-request select {
+.design-request select, .print-request select, .web-design-request select, .place-order select {
     width: 40%;
     margin-left: 0;
     padding: 5px;
@@ -1461,7 +1469,7 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request select:focus, .print-request select:focus, .web-design-request select:focus {
+.design-request select:focus, .print-request select:focus, .web-design-request select:focus, .place-order select:focus {
     border: 1px solid var(--Orange);
 }
 

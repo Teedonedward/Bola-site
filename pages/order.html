@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Design</title>
+    <title>Order</title>
     <script defer src="../scripts/slider.js"></script>
-    <script defer src="../scripts/image_select_design.js"></script>
+    <script defer src="../scripts/image_select_print.js"></script>
 </head>
 <body>
     <div class="header">
@@ -28,7 +28,6 @@
             </ul>
         </nav>
         <a href="../index.html"><img class="Bola-logo" src="../images/logo.png" alt="Bola logo" /></a>
-        <a class="sign-in" href="pages/sign-In">Sign In</a>
     </div>
     <div class="wrapper">
         <div class="carousel">
@@ -41,35 +40,35 @@
             <img src="../images/business-card.jpg" alt="">
         </div>
     </div>
-    <div class="design-request">
+    <div class="place-order">
         <div class="card">
             <form action="">
-                <p>Request for graphic design(s) at your own price</p>
-                <input type="text" name="title" id="title" placeholder="Design Title">
+                <p>Place Order</p>
+                <input type="text" name="title" id="title" placeholder="Order Title">
                 <input type="text" name="name" id="name" placeholder="Name">
                 <input type="email" name="email" id="email" placeholder="Email">
                 <input type="tel" name="number" id="number" placeholder="Phone number">
-                <label for="design_type">Design type</label>
+                <label for="design_type">Order type</label>
                 <select name="design_type" id="design_type">
-                    <option value="logo" selected>Logo</option>
+                    <option value="paper bag" selected>Paper bag</option>
                     <option value="flyer">Flyer</option>
+                    <option value="picture frame">Picture frame</option>
                     <option value="banner">Banner</option>
                     <option value="billboard">Billboard</option>
                     <option value="sticker">Sticker</option>
                     <option value="letter head">Letter head</option>
                     <option value="shirt">Shirt</option>
-                    <option value="web page">Web page</option>
-                    <option value="web site">Web site</option>
+                    <option value="jotter_notepad">Jotter/Notepad</option>
+                    <option value="business card">Business card</option>
                     <option value="iv">Invitation</option>
                     <option value="id">ID</option>
-                    <option value="layout">Layout</option>
-                    <option value="illustration">Illustration</option>
+                    <option value="mug">Mug</option>
                     <option value="book cover">Book cover</option>
-                    <option value="online ad">Online ad</option>
+                    <option value="exercise book">Exercise book</option>
                     <option value="song cover">Song cover</option>
-                    <option value="book layout">Book layout</option>
+                    <option value="book layout">Book inner</option>
+                    <option value="poly packaging">Poly packaging</option>
                 </select>
-                <input type="number" name="budget" id="budget" placeholder="Design Budget">
                 <div class="dimensions">
                     <div>
                         <div>
@@ -102,28 +101,14 @@
                         <input type="number" name="inputwidth" id="inputwidth" placeholder="width">
                     </div>
                 </div>
+                <input type="number" name="quantity" id="quantity" placeholder="quantity">
                 <label for="file">File upload</label>
                 <input type="file" name="file" id="file">
             </form>
             <div class="image">
-                <img id="image" src="../images/teedon_logo.jpg" alt="logo">
+                <img id="image" src="../images/paper_bag.jpg" alt="Paper bag">
             </div>
             <input type="submit" id="submit" value="submit">
-        </div>
-    </div>
-    <div class="design-subscription">
-        <p class="paragraph">
-            We have monthly design packages tailored to suit your specific needs. Subscribe to one of our monthly design plans and get your designs when you need them.
-        </p>
-        <a class="ten"href="24hr_print_shop.html">10 designs</a>
-        <a class="fifteen"href="24hr_print_shop.html">15 designs</a>
-        <a class="twenty"href="24hr_print_shop.html">20 designs</a>
-        <a class="thirty"href="24hr_print_shop.html">30 designs</a>
-        <div class="twenty-four">
-            <h3>24 Hours Print Shop</h3>
-            <p class="p-text">
-                Our 24 hours print shop offers printing services that we deliver in 24 hours. <a href="../pages/24hrs-print-shop.html">Explore the 24 Hours shop</a>
-            </p>
         </div>
     </div>
     <div class="footer">
