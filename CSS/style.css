@@ -919,7 +919,7 @@ button {
 
 .items {
     display: flex;
-    width: 80%;
+    width: 90%;
     padding: 10px;
     margin: 0 auto;
     margin-top: 50px;
@@ -927,15 +927,18 @@ button {
 }
 
 .items div {
-    margin: 10px auto;
-    padding: 5px 15px;
+    height: 120px;
+    margin: 10px 10px auto;
+    padding: 15px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: #0000003b;
 }
 
 .items span {
     color: var(--Dark-Grey);
     font-size: 20px;
     font-weight: bold;
-    padding-left: 5px;
     text-align: center;
 }
 .items p {
@@ -943,7 +946,7 @@ button {
     font-size: 15px;
     margin-bottom: 5px;
     padding: 10px;
-    padding-top: 5px;
+    padding-top: 15px;
     text-align: justify;
 }
 
@@ -1373,6 +1376,18 @@ button {
     margin-left: 0;
 }
 
+.contact-form {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-top: 15px solid var(--Dark-Grey);
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bola_logo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 .design-request, .print-request, .web-design-reques, .place-order {
     display: flex;
     width: 100%;
@@ -1401,6 +1416,21 @@ button {
                 -2px -2px 8px #0000006e;
 }
 
+.card-form {
+    position: relative;
+    width: 80%;
+    display: flex;
+    margin: 20px auto;
+    background-color: #00000015;
+    background-blend-mode: multiply;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    box-shadow: 2px 2px 8px #0000006e,
+                -2px -2px 8px #0000006e;
+}
+
 .design-request form, .print-request form, .web-design-request form, .place-order form {
     display: flex;
     flex-direction: column;
@@ -1408,6 +1438,29 @@ button {
     padding: 50px;
     border-radius: 6px;
     background-color: #00000015;
+}
+
+.contact-form form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    padding: 50px;
+    border-radius: 6px;
+    background-color: #00000015;
+}
+
+#message {
+    width: 80%;
+    height: 200px;
+    margin: 10px auto;
+    margin-left: 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--lite-Grey);
+    border: 1.5px solid var(--Magenta);
+    transition: all 250ms ease-in-out;
 }
 
 .design-request image, .print-request image, .web-design-request image, .place-order image {
@@ -1422,20 +1475,20 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request p, .print-request p, .web-design-request p, .place-order p {
+.design-request p, .print-request p, .web-design-request p, .place-order p, .contact-form p {
     color: var(--Dark-Grey);
     font-size: 16px;
     font-weight: bold;
 }
 
-.design-request label, .print-request label, .web-design-request label, .place-order label {
+.design-request label, .print-request label, .web-design-request label, .place-order label, .contact-form label {
     color: var(--Black);
     font-size: 14px;
     font-weight: bold;
     padding-top: 15px;
 }
 
-.design-request input, .print-request input, .web-design-request input, .place-order input {
+.design-request input, .print-request input, .web-design-request input, .place-order input, .contact-form input {
     width: 70%;
     margin: 10px auto;
     margin-left: 0;
@@ -1446,7 +1499,7 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request input:focus, .print-request input:focus, .web-design-request input:focus, .place-order input:focus {
+.design-request input:focus, .print-request input:focus, .web-design-request input:focus, .place-order input:focus, .contact-form input:focus {
     outline: none;
     border: none;
     background: none;
@@ -1458,7 +1511,7 @@ button {
     margin-left: 0;
 }
 
-.design-request select, .print-request select, .web-design-request select, .place-order select {
+.design-request select, .print-request select, .web-design-request select, .place-order select, .contact-form select {
     width: 40%;
     margin-left: 0;
     padding: 5px;
@@ -1469,7 +1522,7 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request select:focus, .print-request select:focus, .web-design-request select:focus, .place-order select:focus {
+.design-request select:focus, .print-request select:focus, .web-design-request select:focus, .place-order select:focus, .contact-form select:focus {
     border: 1px solid var(--Orange);
 }
 
@@ -1511,12 +1564,27 @@ button {
     box-shadow: 2px 2px 5px #000;
 }
 
-#submit:hover {
+#send {
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    right: 100px;
+    font-size: 16px;
+    padding: 10px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    color: var(--White);
+    background-color: var(--Orange);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
+}
+
+#submit:hover, #send:hover {
     color: var(--Orange);
     background-color: var(--Dark-Grey);
 }
 
-#submit:active {
+#submit:active, #send:active {
     padding: 5px;
     margin-bottom: 45px;
     color: var(--Orange);
