@@ -1099,74 +1099,21 @@ button {
 }
 
 .services {
-    display: grid;
+    width: 90%;
+    display: flex;
     background: var(--lite-Grey);
-    margin: 30px 200px;
+    margin: 30px auto;
     padding: 10px;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-    "service1 service2 service3 service4"
-    "service5 service6 service7 service8"
-    "service9 service10 service11 service12";
-    grid-gap: 5px;
 }
 
-.service1, .service2, .service3, .service4, .service5, .service6, .service7, .service8, .service9, .service10, .service11, .service12 {
-    width: 100%;
+.services img {
+    width: 80px;
     height: 80px;
-    border-radius: 4px;
+    margin: 10px auto;
+    border-radius: 50%;
     box-shadow: -1px -1px 2px var(--Black);
-}
-
-.service1 {
-    grid-area: service1;
-}
-
-.service2 {
-    grid-area: service2;
-}
-
-.service3 {
-    grid-area: service3;
-}
-
-.service4 {
-    grid-area: service4;
-}
-
-.service5 {
-    grid-area: service5;
-}
-
-.service6 {
-    grid-area: service6;
-}
-
-.service7 {
-    grid-area: service7;
-}
-
-.service8 {
-    grid-area: service8;
-}
-
-.service9 {
-    grid-area: service9;
-}
-
-.service10 {
-    grid-area: service10;
-}
-
-.service11 {
-    grid-area: service11;
-}
-
-.service12 {
-    grid-area: service12;
 }
 
 .email-subscription {
@@ -1179,7 +1126,6 @@ button {
     padding: 20px 100px;
     padding-top: 0;
     margin: 50px auto;
-    margin-top: -70px;
 }
 
 .email-text {
@@ -1187,6 +1133,7 @@ button {
     margin: 0 auto;
     padding-bottom: 10px;
     width: 100%;
+    font-size: 16px;
     text-align: center;
     color: var(--Grey);
 }
