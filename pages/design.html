@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script defer src="../scripts/slider.js"></script>
     <script defer src="../scripts/image_select_design.js"></script>
 </head>
+
 <body>
     <div class="header">
         <nav class="navbar">
@@ -72,34 +74,38 @@
                 <input type="number" name="budget" id="budget" placeholder="Design Budget">
                 <div class="dimensions">
                     <div>
-                        <div>
-                            <label for="length">Length</label>
-                            <select name="length" id="length">
-                                <option value="A6">A6</option>
-                                <option value="A5">A5</option>
-                                <option value="A4">A4</option>
-                                <option value="A3">A3</option>
-                                <option value="A2">A2</option>
-                                <option value="A1">A1</option>
-                                <option value="custom length">Custom length</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="width">Width</label>
-                            <select name="width" id="width">
-                                <option value="A6">A6</option>
-                                <option value="A5">A5</option>
-                                <option value="A4">A4</option>
-                                <option value="A3">A3</option>
-                                <option value="A2">A2</option>
-                                <option value="A1">A1</option>
-                                <option value="custom width">Custom width</option>
-                            </select>
-                        </div>
+                        <input type="number" name="length" id="length" placeholder="length">
+                        <select name="lenght-unit" id="lengthunit">
+                            <option value="cm">cm</option>
+                            <option value="inch">inch</option>
+                            <option value="ft">ft</option>
+                            <option value="mm">mm</option>
+                            <option value="m">m</option>
+                            <option value="px">px</option>
+                            <option value="A6">A6</option>
+                            <option value="A5">A5</option>
+                            <option value="A4">A4</option>
+                            <option value="A3">A3</option>
+                            <option value="A2">A2</option>
+                            <option value="A1">A1</option>
+                        </select>
                     </div>
                     <div>
-                        <input type="number" name="inputlength" id="inputlength" placeholder="length">
-                        <input type="number" name="inputwidth" id="inputwidth" placeholder="width">
+                        <input type="number" name="width" id="width" placeholder="width">
+                        <select name="width-unit" id="width-unit">
+                            <option value="cm">cm</option>
+                            <option value="inch">inch</option>
+                            <option value="ft">ft</option>
+                            <option value="mm">mm</option>
+                            <option value="m">m</option>
+                            <option value="px">px</option>
+                            <option value="A6">A6</option>
+                            <option value="A5">A5</option>
+                            <option value="A4">A4</option>
+                            <option value="A3">A3</option>
+                            <option value="A2">A2</option>
+                            <option value="A1">A1</option>
+                        </select>
                     </div>
                 </div>
                 <label for="file">File upload</label>
@@ -113,16 +119,18 @@
     </div>
     <div class="design-subscription">
         <p class="paragraph">
-            We have monthly design packages tailored to suit your specific needs. Subscribe to one of our monthly design plans and get your designs when you need them.
+            We have monthly design packages tailored to suit your specific needs. Subscribe to one of our monthly design
+            plans and get your designs when you need them.
         </p>
-        <a class="ten"href="24hr_print_shop.html">10 designs</a>
-        <a class="fifteen"href="24hr_print_shop.html">15 designs</a>
-        <a class="twenty"href="24hr_print_shop.html">20 designs</a>
-        <a class="thirty"href="24hr_print_shop.html">30 designs</a>
+        <a class="ten" href="24hr_print_shop.html">10 designs</a>
+        <a class="fifteen" href="24hr_print_shop.html">15 designs</a>
+        <a class="twenty" href="24hr_print_shop.html">20 designs</a>
+        <a class="thirty" href="24hr_print_shop.html">30 designs</a>
         <div class="twenty-four">
             <h3>24 Hours Print Shop</h3>
             <p class="p-text">
-                Our 24 hours print shop offers printing services that we deliver in 24 hours. <a href="../pages/24hrs-print-shop.html">Explore the 24 Hours shop</a>
+                Our 24 hours print shop offers printing services that we deliver in 24 hours. <a
+                    href="../pages/24hrs-print-shop.html">Explore the 24 Hours shop</a>
             </p>
         </div>
     </div>
@@ -130,16 +138,16 @@
         <div class="footer_sd">
             <div class="reach-out">
                 <ul>
-                    <li><a href="../pages/about_us.html">About Us</a></li>
-                    <li><a href="../pages/contact_us.html">Contact Us</a></li>
-                    <li><a href="../pages/work_with_us.html">Work with Us</a></li>
+                    <li><a href="/pages/about.html">About Us</a></li>
+                    <li><a href="/pages/contact.html">Contact Us</a></li>
+                    <li><a href="/pages/work_with_us.html">Work with Us</a></li>
                 </ul>
             </div>
             <div class="explore">
                 <ul>
-                    <li><a href="../pages/projects">Mockups & Designs</a></li>
-                    <li><a href="../pages/blogs">Blogs</a></li>
-                    <li><a href="../pages/terms_and_conditions">Terms and Conditions</a></li>
+                    <li><a href="/pages/projects">Mockups & Designs</a></li>
+                    <li><a href="/pages/blogs">Blogs</a></li>
+                    <li><a href="/pages/terms_and_conditions">Terms and Conditions</a></li>
                 </ul>
             </div>
             <div class="follow-us">
@@ -147,10 +155,14 @@
                     Follow us on our social media platforms
                 </p>
                 <ul>
-                    <li><a href="https://facebook.com/bola"><img src="../images/icons/social_icons/facebook.png" alt="Bola Facebook page" width="20px" /></a></li>
-                    <li><a href="https://twitter.com/bola"><img src="../images/icons/social_icons/twitter.png" alt="Bola Twitter page" width="20px" /></a></li>
-                    <li><a href="https://instagram.com/bola"><img src="../images/icons/social_icons/instagram.png" alt="Bola Instagram page" width="20px" /></a></li>
-                    <li><a href="https://YouTube.com/bola"><img src="../images/icons/social_icons/youtube.png" alt="Bola Youtube page" width="20px" /></a></li>
+                    <li><a href="https://facebook.com/bola"><img src="../images/icons/social_icons/facebook.png"
+                                alt="Bola Facebook page" width="20px" /></a></li>
+                    <li><a href="https://twitter.com/bola"><img src="../images/icons/social_icons/twitter.png"
+                                alt="Bola Twitter page" width="20px" /></a></li>
+                    <li><a href="https://instagram.com/bola"><img src="../images/icons/social_icons/instagram.png"
+                                alt="Bola Instagram page" width="20px" /></a></li>
+                    <li><a href="https://YouTube.com/bola"><img src="../images/icons/social_icons/youtube.png"
+                                alt="Bola Youtube page" width="20px" /></a></li>
                 </ul>
             </div>
             <div class="copyright">
@@ -161,4 +173,5 @@
         </div>
     </div>
 </body>
+
 </html>

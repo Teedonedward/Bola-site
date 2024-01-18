@@ -1335,7 +1335,7 @@ button {
     background-size: cover;
 }
 
-.design-request, .print-request, .web-design-reques, .place-order {
+.design-request, .print-request, .web-design-request, .place-order {
     display: flex;
     width: 100%;
     margin: auto;
@@ -1395,19 +1395,6 @@ button {
     padding: 50px;
     border-radius: 6px;
     background-color: #00000015;
-}
-
-#message {
-    width: 80%;
-    height: 200px;
-    margin: 10px auto;
-    margin-left: 0;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--lite-Grey);
-    border: 1.5px solid var(--Magenta);
-    transition: all 250ms ease-in-out;
 }
 
 .design-request image, .print-request image, .web-design-request image, .place-order image {
@@ -1475,8 +1462,7 @@ button {
 
 .dimensions {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    width: 70%;
     padding: 10px;
     padding-left: 0;
     padding-top: 0;
@@ -1488,12 +1474,21 @@ button {
 }
 
 .dimensions select {
-    width: 80%;
+    width: 50px;
     margin-top: 5px;
 }
 
-#inputlength, #inputwidth {
-    display: none;
+#message {
+    width: 80%;
+    height: 200px;
+    margin: 10px auto;
+    margin-left: 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--lite-Grey);
+    border: 1.5px solid var(--Magenta);
+    transition: all 250ms ease-in-out;
 }
 
 #submit {
@@ -1589,4 +1584,33 @@ button {
     background: var(--Dark-Grey);
     font-size: 22px;
     border: 1px solid var(--Orange);
+}
+
+/* About Us */
+
+.about {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 16px;
+    text-justify: justify;
+}
+
+.goal {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission, .vission {
+    margin: 10px auto;
+    padding: 50px;
+}
+
+.about h2 {
+    text-align: center;
+}
+
+.about p {
+    text-justify: justify;
 }

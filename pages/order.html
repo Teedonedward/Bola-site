@@ -71,34 +71,38 @@
                 </select>
                 <div class="dimensions">
                     <div>
-                        <div>
-                            <label for="length">Length</label>
-                            <select name="length" id="length">
-                                <option value="A6">A6</option>
-                                <option value="A5">A5</option>
-                                <option value="A4">A4</option>
-                                <option value="A3">A3</option>
-                                <option value="A2">A2</option>
-                                <option value="A1">A1</option>
-                                <option value="custom length">Custom length</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="width">Width</label>
-                            <select name="width" id="width">
-                                <option value="A6">A6</option>
-                                <option value="A5">A5</option>
-                                <option value="A4">A4</option>
-                                <option value="A3">A3</option>
-                                <option value="A2">A2</option>
-                                <option value="A1">A1</option>
-                                <option value="custom width">Custom width</option>
-                            </select>
-                        </div>
+                        <input type="number" name="length" id="length" placeholder="length">
+                        <select name="lenght-unit" id="lengthunit">
+                            <option value="cm">cm</option>
+                            <option value="inch">inch</option>
+                            <option value="ft">ft</option>
+                            <option value="mm">mm</option>
+                            <option value="m">m</option>
+                            <option value="px">px</option>
+                            <option value="A6">A6</option>
+                            <option value="A5">A5</option>
+                            <option value="A4">A4</option>
+                            <option value="A3">A3</option>
+                            <option value="A2">A2</option>
+                            <option value="A1">A1</option>
+                        </select>
                     </div>
                     <div>
-                        <input type="number" name="inputlength" id="inputlength" placeholder="length">
-                        <input type="number" name="inputwidth" id="inputwidth" placeholder="width">
+                        <input type="number" name="width" id="width" placeholder="width">
+                        <select name="width-unit" id="width-unit">
+                            <option value="cm">cm</option>
+                            <option value="inch">inch</option>
+                            <option value="ft">ft</option>
+                            <option value="mm">mm</option>
+                            <option value="m">m</option>
+                            <option value="px">px</option>
+                            <option value="A6">A6</option>
+                            <option value="A5">A5</option>
+                            <option value="A4">A4</option>
+                            <option value="A3">A3</option>
+                            <option value="A2">A2</option>
+                            <option value="A1">A1</option>
+                        </select>
                     </div>
                 </div>
                 <input type="number" name="quantity" id="quantity" placeholder="quantity">
