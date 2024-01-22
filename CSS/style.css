@@ -1335,7 +1335,7 @@ button {
     background-size: cover;
 }
 
-.design-request, .print-request, .web-design-request, .place-order {
+.design-request, .print-request, .web-design-request, .subscription-request, .place-order {
     display: flex;
     width: 100%;
     margin: auto;
@@ -1348,7 +1348,7 @@ button {
     background-size: cover;
 }
 
-.card {
+.card, .card-subscribe {
     position: relative;
     width: 80%;
     display: flex;
@@ -1378,7 +1378,7 @@ button {
                 -2px -2px 8px #0000006e;
 }
 
-.design-request form, .print-request form, .web-design-request form, .place-order form {
+.design-request form, .print-request form, .web-design-request form, .subscription-request form, .place-order form {
     display: flex;
     flex-direction: column;
     margin: 50px 50px;
@@ -1409,20 +1409,20 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request p, .print-request p, .web-design-request p, .place-order p, .contact-form p {
+.design-request p, .print-request p, .web-design-request p, .subscription-request p, .place-order p, .contact-form p {
     color: var(--Dark-Grey);
     font-size: 16px;
     font-weight: bold;
 }
 
-.design-request label, .print-request label, .web-design-request label, .place-order label, .contact-form label {
+.design-request label, .print-request label, .web-design-request label, .subscription-request label, .place-order label, .contact-form label {
     color: var(--Black);
     font-size: 14px;
     font-weight: bold;
     padding-top: 15px;
 }
 
-.design-request input, .print-request input, .web-design-request input, .place-order input, .contact-form input {
+.design-request input, .print-request input, .web-design-request input, .subscription-request input, .place-order input, .contact-form input {
     width: 70%;
     margin: 10px auto;
     margin-left: 0;
@@ -1433,7 +1433,7 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request input:focus, .print-request input:focus, .web-design-request input:focus, .place-order input:focus, .contact-form input:focus {
+.design-request input:focus, .print-request input:focus, .web-design-request input:focus, .subscription-request input:focus .place-order input:focus, .contact-form input:focus {
     outline: none;
     border: none;
     background: none;
@@ -1445,7 +1445,7 @@ button {
     margin-left: 0;
 }
 
-.design-request select, .print-request select, .web-design-request select, .place-order select, .contact-form select {
+.design-request select, .print-request select, .web-design-request select, .subscription-request select, .place-order select, .contact-form select {
     width: 40%;
     margin-left: 0;
     padding: 5px;
@@ -1456,7 +1456,7 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.design-request select:focus, .print-request select:focus, .web-design-request select:focus, .place-order select:focus, .contact-form select:focus {
+.design-request select:focus, .print-request select:focus, .web-design-request select:focus, .subscription-request select:focus .place-order select:focus, .contact-form select:focus {
     border: 1px solid var(--Orange);
 }
 
