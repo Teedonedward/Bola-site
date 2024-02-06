@@ -196,6 +196,36 @@ button {
     /*border: 1px solid var(--Dark-Grey);*/
 }
 
+.promo {
+    display: flex;
+    margin: 5px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.promo a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--White);
+    font-size: 16px;
+    background-color: red;
+    padding: 15px 40px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 450ms ease-in-out;
+}
+
+.promo a:hover {
+    color: var(--White);
+    font-size: 17px;
+    background-color: rgb(208, 3, 3);
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px #000000b6;
+}
+
 .quick-service a {
     width: 100%;
     text-decoration: none;
@@ -561,6 +591,62 @@ button {
     }
 }
 
+.roses {
+    overflow: hidden;
+    position: absolute;
+    top: 60;
+    left: 40;
+    transform-origin: top-left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: animate 12s 0.5s ease-in forwards infinite;
+    z-index: 5;
+}
+
+.one {
+    width: 50px;
+    left: 12%;
+    animation-delay: 1s;
+}
+
+.two {
+    width: 50px;
+    left: 85%;
+    top: 65%;
+    animation-delay: 3s;
+}
+
+.three {
+    width: 50px;
+    left: 73%;
+    top: 10%;
+    animation-delay: 5s;
+}
+
+.four {
+    width: 50px;
+    left: 10%;
+    bottom: 15%;
+    animation-delay: 7s;
+}
+
+.five {
+    width: 50px;
+    left: 50%;
+    top: 10%;
+    animation-delay: 9s;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(5) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
 .digital-marketing {
     display: grid;
     place-items: center;
@@ -618,6 +704,14 @@ button {
     animation: slide 1.8s 500ms ease-in;
 }
 
+.promo-list {
+    background-image: url(../images/featuredlistbackground.jpg) repeat 100%;
+    background-position: center;
+    width: 100%;
+    padding-bottom: 30px;
+    animation: slide 1.8s 500ms ease-in;
+}
+
 @keyframes slide {
     0% {
         transform: translateX(-100%);
@@ -641,7 +735,24 @@ button {
     padding-bottom: 30px;
 }
 
+.promolist-overlay {
+    display: flex;
+    flex-direction: column;
+    background: rgba(225, 225, 225, 0.95);
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.promo-listed {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .featuredlist-overlay:nth-child(1) {
+    padding: 35px 75px;
+}
+
+.promolist-overlay:nth-child(1) {
     padding: 35px 75px;
 }
 
@@ -711,16 +822,30 @@ button {
         display: flex;
         flex-direction: column;
     }
+
+    .promolist-overlay {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.offer-heading {
+    display: flex;
 }
 
 .h1 {
-    grid-area: h1;
+    width: 30%;
     color: var(--Dark-Grey);
-    padding-top: 10px;
     font-size: 30px;
     font-weight: bold;
     text-shadow: var(--Dark-Grey);
     text-align: left;
+}
+
+.image {
+    grid-area: image;
+    margin: 0 300px;
+    width: 50px;
 }
 
 .list {
@@ -794,10 +919,80 @@ button {
     animation-delay: 1200ms; 
 }
 
+.plist {
+    position: relative;
+    width: 280px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 9px;
+    background-image: linear-gradient(45deg, rgba(128, 0, 128, 0.15), rgba(252, 3, 94, 0.15));
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 350ms ease-in-out;
+    animation: appear 2s ease-in;
+}
+
+.plist:nth-child(1) {
+    animation-delay: 800ms;
+}
+
+.plist:nth-child(2) {
+    animation-delay: 900ms;
+}
+
+.plist:nth-child(3) {
+    animation-delay: 1000ms;
+}
+
+.plist:nth-child(4) {
+    animation-delay: 1100ms; 
+}
+
+.plist:nth-child(5) {
+    animation-delay: 850ms; 
+}
+
+.plist:nth-child(6) {
+    animation-delay: 950ms;
+}
+
+.plist:nth-child(7) {
+    animation-delay: 1050ms; 
+}
+
+.plist:nth-child(8) {
+    animation-delay: 1150ms; 
+}
+
+.plist:nth-child(9) {
+    animation-delay: 900ms; 
+}
+
+.plist:nth-child(10) {
+    animation-delay: 1000ms;
+}
+
+.plist:nth-child(11) {
+    animation-delay: 1100ms; 
+}
+
+.plist:nth-child(12) {
+    animation-delay: 1200ms; 
+}
+
 .list:hover {
     margin: 9px;
     height: 300px;
     background-color: rgba(137, 43, 226, 0.45);
+    box-shadow: 2px 2px 5px var(--Dark-Grey);
+}
+
+.plist:hover {
+    margin: 8px;
+    height: 300px;
+    background-color: rgba(233, 32, 32, 0.887);
     box-shadow: 2px 2px 5px var(--Dark-Grey);
 }
 
@@ -810,8 +1005,17 @@ button {
     transition: all 250ms ease-in-out;
 }
 
-.list img:hover {
-    width: 160px;
+.plist img {
+    width: 180px;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--Dark-Grey);
+    transition: all 250ms ease-in-out;
+}
+
+.list img:hover, .plist img:hover {
+    width: 140px;
 }
 
 .list:hover img {
@@ -819,6 +1023,48 @@ button {
     align-items: top;
     top: 0;
     transform: translateY(10);
+    transition: all 450ms ease-in-out;
+}
+
+.plist:hover img {
+    position: absolute;
+    width: 130px;
+    align-items: top;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    transition: all 450ms ease-in-out;
+}
+
+.plist-items {
+    display: none;
+    width: 120px;
+    height: 150px;
+    transition: all 450ms ease-in-out;
+    cursor: pointer;
+}
+
+.plist-items ul {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--White);
+    border-radius: 5px;
+}
+
+.plist-items ul li {
+    color: var(--Black);
+    margin-left: 15px;
+}
+
+.plist:hover .plist-items {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-top: 5px;
     transition: all 450ms ease-in-out;
 }
 
@@ -839,7 +1085,7 @@ button {
     border-bottom-right-radius: 10px;
 }
 
-.list:hover .container {
+.list:hover .container, .plist:hover .container {
     display: flex;
     animation: slide-in 750ms ease-in-out;
 }
@@ -998,7 +1244,16 @@ button {
     padding: 20px;
     justify-content: center;
     align-items: center;
-    color: var(--Grey);
+}
+
+.text ul {
+    margin: 20px;
+    text-align: left;
+}
+
+.text ul li {
+    padding: 5px;
+    color: var(--Magenta);
     font-size: 15px;
 }
 
