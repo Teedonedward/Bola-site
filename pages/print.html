@@ -7,6 +7,8 @@
     <title>Print</title>
     <script defer src="../scripts/slider.js"></script>
     <script defer src="../scripts/image_select_print.js"></script>
+    <script defer src="../scripts/Payment.js"></script>
+    <script src="https://js.paystack.co./v1/inline.js"></script>
 </head>
 <body>
     <div class="header">
@@ -43,7 +45,7 @@
     </div>
     <div class="print-request">
         <div class="card">
-            <form action="">
+            <form id="order-form" action="">
                 <p>Describe item for print</p>
                 <input type="text" name="title" id="title" placeholder="Print Title">
                 <input type="text" name="name" id="name" placeholder="Name">
@@ -106,13 +108,14 @@
                         </select>
                     </div>
                 </div>
+                <input type="text" name="amount" id="amount">
                 <label for="file">File upload</label>
                 <input type="file" name="file" id="file">
             </form>
             <div class="image">
                 <img id="image" src="../images/paper_bag.jpg" alt="Paper bag">
             </div>
-            <input type="submit" id="submit" value="submit">
+            <input type="submit" id="submit" value="submit" onclick="payWithPaystack()">
         </div>
     </div>
     <div class="print-shop">
